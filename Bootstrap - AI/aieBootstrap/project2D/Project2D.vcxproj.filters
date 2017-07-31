@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Behavior">
+      <UniqueIdentifier>{9871578b-c1d9-4c15-bc60-e875ba11bd9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{d57658ea-ffc1-4eb0-8321-bcae4fbfdb01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
@@ -27,14 +33,35 @@
     <ClCompile Include="AStar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Bot.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BotUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorPursue.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateAggressive.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachineAI.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorSeek.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorFlee.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorArrival.cpp">
+      <Filter>Behavior</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,16 +71,10 @@
     <ClInclude Include="GridNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AStar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\bootstrap\AStarNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Heap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BaseState.h">
@@ -82,6 +103,42 @@
     </ClInclude>
     <ClInclude Include="Bot.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BotUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBehavior.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="ListNode.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorPursue.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="StateAggressive.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachineAI.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStateAI.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorSeek.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorFlee.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorArrival.h">
+      <Filter>Behavior</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

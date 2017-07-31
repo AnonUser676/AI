@@ -12,6 +12,7 @@ Entity::~Entity()
 {
 }
 
+
 void Entity::setSpeed(int inSpeed)
 {
 	speed = inSpeed;
@@ -30,6 +31,16 @@ int Entity::getSpeed()
 int Entity::getHealth()
 {
 	return health;
+}
+
+void Entity::setPos(Vector2 Pos)
+{
+	m_v2Pos = Pos;
+}
+
+Vector2 Entity::getPos()
+{
+	return m_v2Pos;
 }
 
 Vector2 Entity::getPosition()

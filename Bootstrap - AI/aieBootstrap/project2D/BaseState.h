@@ -5,16 +5,6 @@
 using namespace aie;
 using namespace std;
 
-enum STATE
-{
-	STATE_SPLASH,
-	STATE_LOAD,
-	STATE_MENU,
-	STATE_GAME,
-	STATE_PAUSE,
-	STATE_COUNTER
-};
-
 class StateMachine;
 
 class BaseState

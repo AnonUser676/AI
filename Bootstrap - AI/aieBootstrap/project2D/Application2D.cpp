@@ -3,7 +3,7 @@
 #include "Font.h"
 #include "Input.h"
 #include "Vector2.h"
-
+#include "BaseStateAI.h"
 
 
 using namespace aie;
@@ -37,7 +37,7 @@ bool Application2D::startup()
 			//Create the nodes
 			m_ppGrid[index] = new GridNode(pos, index , x , y);
 
-			if (x % 3 == 0 && y != 0)
+			if (x % 3 == 0 && y != 6 && y != 9 && y != 10)
 			{
 				m_ppGrid[index]->m_blocked = true;
 			}
@@ -118,6 +118,7 @@ bool Application2D::startup()
 		}
 	}
 	bot = new Bot(m_ppGrid);
+	botunit = new BotUnit;
 	return true;
 }
 
@@ -134,6 +135,8 @@ void Application2D::shutdown()
 
 	delete bot;
 
+	delete botunit;
+
 }
 
 void Application2D::update(float deltaTime) 
@@ -146,13 +149,15 @@ void Application2D::update(float deltaTime)
 		quit();
 
 	bot->Update(deltaTime);
+
+	botunit->EnUpdate(deltaTime, botunit);
 }
 
 void Application2D::draw() 
 {
 	clearScreen();
 
-	m_2dRenderer->setCameraPos(-100, -100);
+	m_2dRenderer->setCameraPos(-OFFSET, -OFFSET);
 	m_2dRenderer->begin();
 
 	for (int i = 0; i < GRID_SIZE * GRID_SIZE; i++)
@@ -175,7 +180,7 @@ void Application2D::draw()
 	{
 		float x = m_ppGrid[i]->m_v2Pos.x;
 		float y = m_ppGrid[i]->m_v2Pos.y;
-		for (int a = 0; a < m_ppGrid[i]->m_AdjacentList.size(); a++)
+		for (unsigned int a = 0; a < m_ppGrid[i]->m_AdjacentList.size(); a++)
 		{
 			GridNode* otherNode = ((GridNode*)m_ppGrid[i]->m_AdjacentList[a]->m_pEndNode);
 
@@ -188,5 +193,6 @@ void Application2D::draw()
 	}
 
 	bot->BotDraw(m_2dRenderer);
+	botunit->onDraw(m_2dRenderer);
 	m_2dRenderer->end();
 }

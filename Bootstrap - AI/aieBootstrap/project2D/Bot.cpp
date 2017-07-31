@@ -5,7 +5,7 @@ int CalcHeuristic(AStarNode* pNode, AStarNode* pEnd)
 	int difX = abs(((GridNode*)pNode)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX);
 	int difY = abs(((GridNode*)pNode)->m_nIndexY - ((GridNode*)pEnd)->m_nIndexY);
 
-	return sqrt(difX * difX + difY * difY);
+	return sqrt((difX * difX) + (difY * difY));
 	//return 0;
 }
 
@@ -46,7 +46,7 @@ void Bot::BotDraw(Renderer2D* m_Renderer)
 		m_Renderer->setRenderColour(0xFFFFFFFF);
 	}
 
-	m_Renderer->drawSprite(m_Car,Pos.x,Pos.y,50.0f,50.0f);
+	m_Renderer->drawSprite(m_Car,Pos.x,Pos.y,0.0f,0.0f);
 
 }
 
@@ -84,4 +84,7 @@ void Bot::Update(float deltaTime)
 	}
 }
 
-void Reset();
+void Bot::onEnter() {}
+void Bot::EnUpdate(float deltaTIme, Entity* Agent) {}
+void Bot::onDraw(Renderer2D* renderer2D) {}
+void Bot::onExit() {}

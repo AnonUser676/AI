@@ -1,6 +1,7 @@
 #pragma once
 #include "ListNode.h"
 template <typename T>
+
 class LinkedList
 {
 public:
