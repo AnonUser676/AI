@@ -31,7 +31,6 @@ private:
 	Renderer2D* m_Renderer;
 	StateMachineAI* m_StateMachine;
 	StateAggressive* m_Aggressive;
-	
 	int start;
 };
 

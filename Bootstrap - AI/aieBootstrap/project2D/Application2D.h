@@ -7,6 +7,7 @@
 #include "defines.h"
 #include "AStar.h"
 #include "Bot.h"
+#include "Bot2.h"
 #include "BotUnit.h"
 
 using namespace aie;
@@ -32,5 +33,6 @@ protected:
 
 	GridNode** m_ppGrid;
 	Bot*		bot;
+	Bot2*		bot2;
 	BotUnit*	botunit;
 };

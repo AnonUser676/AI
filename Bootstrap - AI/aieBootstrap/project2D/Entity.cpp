@@ -43,6 +43,17 @@ Vector2 Entity::getPos()
 	return m_v2Pos;
 }
 
+void Entity::setVelocity(Vector2 velocityIn)
+{
+	velocity = velocityIn;
+	
+}
+
+Vector2 Entity::getVelocity()
+{
+	return velocity;
+}
+
 Vector2 Entity::getPosition()
 {
 	Vector2 pos;

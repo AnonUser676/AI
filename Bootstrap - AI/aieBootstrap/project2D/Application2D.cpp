@@ -118,6 +118,7 @@ bool Application2D::startup()
 		}
 	}
 	bot = new Bot(m_ppGrid);
+	bot2 = new Bot2(m_ppGrid);
 	botunit = new BotUnit;
 	return true;
 }
@@ -134,6 +135,7 @@ void Application2D::shutdown()
 	delete m_2dRenderer;
 
 	delete bot;
+	delete bot2;
 
 	delete botunit;
 
@@ -149,6 +151,7 @@ void Application2D::update(float deltaTime)
 		quit();
 
 	bot->Update(deltaTime);
+	bot2->Update(deltaTime);
 
 	botunit->EnUpdate(deltaTime, botunit);
 }
@@ -193,6 +196,7 @@ void Application2D::draw()
 	}
 
 	bot->BotDraw(m_2dRenderer);
+	bot2->BotDraw(m_2dRenderer);
 	botunit->onDraw(m_2dRenderer);
 	m_2dRenderer->end();
 }

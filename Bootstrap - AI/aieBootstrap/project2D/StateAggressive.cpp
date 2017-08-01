@@ -1,5 +1,5 @@
 #include "StateAggressive.h"
-#include "BehaviorSeek.h"
+#include "BehaviorArrival.h"
 #include "BehaviorFlee.h"
 #include "Entity.h"
 #include "Input.h"
@@ -7,7 +7,7 @@
 StateAggressive::StateAggressive()
 {
 
-	m_BehaviorList.pushBack(new BehaviorSeek(0.0f));
+	m_BehaviorList.pushBack(new BehaviorArrival(1.0f));
 	m_BehaviorList.pushBack(new BehaviorFlee(0.0f));
 
 	m_car = new Texture("./textures/car.png");
@@ -40,95 +40,48 @@ void StateAggressive::onUpdate(float deltaTIme, StateMachine* State)
 
 void StateAggressive::EnUpdate(float deltaTime, Entity* Agent)
 {
+	Input* input = Input::getInstance();
+	
+		if (input->isKeyDown(INPUT_KEY_F))
+		{
+			m_BehaviorList[0]->m_fWeighting -= 0.01f;
+			m_BehaviorList[1]->m_fWeighting += 0.01f;
+		}
+		else
+		{
+			m_BehaviorList[0]->m_fWeighting += 0.01f;
+			m_BehaviorList[1]->m_fWeighting -= 0.01f;
+		}
+
 	time += deltaTime;
 
 	Vector2 ForceMax;
 
 	for (unsigned int i = 0; i < m_BehaviorList.Size(); i++)
 	{
-		Input* input = Input::getInstance();
-
-		if (m_BehaviorList[i]->m_fWeighting < 0.50f)
-		{
-
-			if (input->isKeyDown(INPUT_KEY_F))
-			{
-				m_BehaviorList[0]->m_fWeighting -= 0.01f;
-				m_BehaviorList[1]->m_fWeighting += 0.01f;
-			}
-			else
-			{
-				m_BehaviorList[0]->m_fWeighting += 0.01f;
-				m_BehaviorList[1]->m_fWeighting -= 0.01f;
-			}
-		}
 		Vector2 ForceCurrent = m_BehaviorList[i]->update(Agent, deltaTime);
 		ForceCurrent = ForceCurrent * m_BehaviorList[i]->m_fWeighting;
 		ForceMax = ForceMax + ForceCurrent;
 
 		float ForceMagnitude = ForceMax.magnitude();
-		if (ForceMagnitude > 10.0f)
+		if (ForceMagnitude > TRUNCATE)
 		{
 			ForceMax.normalise();
-			ForceMax = ForceMax * 10.0f;
+			ForceMax = ForceMax * TRUNCATE;
 			break;
 		}
-
-
 	}
-	Agent->setPos(Agent->getPos() + ForceMax);
+
+	Vector2 velocity = Agent->getVelocity();
+
+	velocity = velocity + ForceMax;
+
+	Agent->setVelocity(velocity);
+
+	Agent->setPos(Agent->getPos() + velocity * 10 * deltaTime);
 }
 
 void StateAggressive::onExit()
 {
 	time = 0.0f;
 }
-/*
-class composite : public BehaviorNode
-{
-public:
-
-EBehqaviorResult:Execute()
-{
-	BehaviorNode* child = pendingNode;
-	unsigned int index = -1
-
-	if (!child)
-	{
-		i = 0;
-
-	}
-
-	for (;i < children.size(); i++)
-	{
-		if (i >= 0)
-			{
-				child = children[i];
-			}
-
-		EBehaviorResult result = child->Execute();
-		if (result == EBehavior_Success)
-			{
-			pendingnode = nullptr;
-			return EBEHavior_Success;
-			}
-
-		if (result == EBehavior_Failure)
-		{
-			index++;
-			child = children[index];
-		}
-	}
-
-	for (unsigned int i = 0; 1 < children.size(); i++)
-	{
-		if(children[i]->execute() == EBehavior_SUCCESS)
-		{
-			return EBehavior_Success;
-		}
-	
-	}
-	return EBehavior_fAIL;
-}
-}
-*/

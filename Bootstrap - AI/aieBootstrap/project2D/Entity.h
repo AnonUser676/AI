@@ -22,10 +22,12 @@ public:
 
 	void setSpeed(int inSpeed);
 	void setHealth(int inHealth);
+	void setVelocity(Vector2 velocityIn);
+	void setPos(Vector2 Pos);
 	int getSpeed();
 	int getHealth();
 	Vector2 getPos();
-	void setPos(Vector2 Pos);
+	Vector2 getVelocity();
 
 	virtual void onEnter() = 0;
 	virtual void EnUpdate(float deltaTIme, Entity* Agent) = 0;
@@ -42,5 +44,6 @@ protected:
 	int speed;
 	int health;
 	Vector2 m_v2Pos;
+	Vector2 velocity;
 };
 

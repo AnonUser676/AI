@@ -168,6 +168,12 @@
     <ClCompile Include="BehaviorFlee.cpp" />
     <ClCompile Include="BehaviorPursue.cpp" />
     <ClCompile Include="BehaviorSeek.cpp" />
+    <ClCompile Include="Bot2.cpp" />
+    <ClCompile Include="BotDecision.cpp" />
+    <ClCompile Include="DecisionButtonPressed.cpp" />
+    <ClCompile Include="DecisionKeyboard.cpp" />
+    <ClCompile Include="DecisionToggled.cpp" />
+    <ClCompile Include="DecisionWander.cpp" />
     <ClCompile Include="StateMachineAI.cpp" />
     <ClCompile Include="StateAggressive.cpp" />
     <ClCompile Include="Bot.cpp" />
@@ -186,6 +192,14 @@
     <ClInclude Include="BehaviorFlee.h" />
     <ClInclude Include="BehaviorPursue.h" />
     <ClInclude Include="BehaviorSeek.h" />
+    <ClInclude Include="Bot2.h" />
+    <ClInclude Include="BotDecision.h" />
+    <ClInclude Include="Decision.h" />
+    <ClInclude Include="DecisionButtonPressed.h" />
+    <ClInclude Include="DecisionKeyboard.h" />
+    <ClInclude Include="DecisionToggled.h" />
+    <ClInclude Include="DecisionTree.h" />
+    <ClInclude Include="DecisionWander.h" />
     <ClInclude Include="IBehavior.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="StateMachineAI.h" />

@@ -7,7 +7,8 @@ BotUnit::BotUnit()
 	m_v2Pos.y = 0.0f;
 	start = 0;
 	setSpeed(50.0f);
-
+	Vector2 initialVelocity(0.0f, 0.0f);
+	setVelocity(initialVelocity);
 	m_StateMachine = new StateMachineAI();
 	m_Aggressive = new StateAggressive();
 	
