@@ -1,7 +1,31 @@
-﻿  StateAggressive.cpp
-d:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\defines.h(6): warning C4005: 'RAND_MAX': macro redefinition
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(339): note: see previous definition of 'RAND_MAX'
-d:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\stateaggressive.cpp(19): warning C4018: '<': signed/unsigned mismatch
-d:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\stateaggressive.cpp(33): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-d:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\stateaggressive.cpp(63): warning C4018: '<': signed/unsigned mismatch
-  Project2D.vcxproj -> D:\_AIE\Test_AI\Bootstrap - AI\aieBootstrap\temp\Project2D\DLL\Project2D.exe
+﻿  DecisionToggled.cpp
+  DecisionButtonPressed.cpp
+  DecisionArrive.cpp
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionarrive.cpp(13): warning C4018: '<': signed/unsigned mismatch
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionarrive.cpp(23): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  main.cpp
+  DecisionWander.cpp
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionwander.cpp(13): warning C4018: '<': signed/unsigned mismatch
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionwander.cpp(23): warning C4018: '<': signed/unsigned mismatch
+  DecisionKeyboard.cpp
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionkeyboard.cpp(13): warning C4018: '<': signed/unsigned mismatch
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\decisionkeyboard.cpp(23): warning C4018: '<': signed/unsigned mismatch
+  BotDecision.cpp
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\botdecision.cpp(10): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  BehaviorArrival.cpp
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\behaviorarrival.cpp(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+g:\_aie\test_ai\bootstrap - ai\aiebootstrap\project2d\behaviorarrival.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Application2D.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  BotUnit.cpp
+  Bot.cpp
+  StateAggressive.cpp
+  Bot2.cpp
+  AStar.cpp
+  AStarNode.cpp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Project2D.vcxproj -> G:\_AIE\Test_AI\Bootstrap - AI\aieBootstrap\temp\Project2D\DLL\Project2D.exe
+  Project2D.vcxproj -> G:\_AIE\Test_AI\Bootstrap - AI\aieBootstrap\temp\Project2D\DLL\Project2D.pdb (Partial PDB)
