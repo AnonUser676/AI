@@ -1,5 +1,5 @@
 #include "StateAggressive.h"
-#include "BehaviorArrival.h"
+#include "BehaviorSeek.h"
 #include "BehaviorFlee.h"
 #include "Entity.h"
 #include "Input.h"
@@ -7,10 +7,10 @@
 StateAggressive::StateAggressive()
 {
 
-	m_BehaviorList.pushBack(new BehaviorArrival(1.0f));
+	m_BehaviorList.pushBack(new BehaviorSeek(1.0f));
 	m_BehaviorList.pushBack(new BehaviorFlee(0.0f));
 
-	m_car = new Texture("./textures/car.png");
+	
 }
 
 
@@ -20,7 +20,7 @@ StateAggressive::~StateAggressive()
 	{
 		delete m_BehaviorList[i];
 	}
-	delete m_car;
+	
 }
 
 void StateAggressive::onEnter()
@@ -29,8 +29,7 @@ void StateAggressive::onEnter()
 }
 
 void StateAggressive::onDraw(Renderer2D* renderer2D)
-{
-	renderer2D->drawSprite(m_car, Pos.x, Pos.y, m_car->getWidth(), m_car->getHeight());
+{	
 }
 
 void StateAggressive::onUpdate(float deltaTIme, StateMachine* State)

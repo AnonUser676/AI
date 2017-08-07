@@ -1,17 +1,18 @@
 #pragma once
 #include "DecisionTree.h"
 #include "defines.h"
-#include "BehaviorKeyboard.h"
+#include "BehaviorArrival.h"
 #include "DynamicArray.h"
 #include "IBehavior.h"
 
 class DecisionTree;
+class BehaviorArrive;
 
-class DecisionKeyboard : public DecisionTree
+class DecisionArrive : public DecisionTree
 {
 public:
-	DecisionKeyboard();
-	~DecisionKeyboard();
+	DecisionArrive();
+	~DecisionArrive();
 
 	void makeDecision(Entity* Agent, float deltaTime);
 

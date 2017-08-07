@@ -1,14 +1,14 @@
-#include "DecisionKeyboard.h"
+#include "DecisionArrive.h"
 
 
 
-DecisionKeyboard::DecisionKeyboard()
+DecisionArrive::DecisionArrive()
 {
-	m_BehaviorList.pushBack(new BehaviorKeyboard(1.0f));
+	m_BehaviorList.pushBack(new BehaviorArrival(1.0f));
 }
 
 
-DecisionKeyboard::~DecisionKeyboard()
+DecisionArrive::~DecisionArrive()
 {
 	for (unsigned int i = 0; i < m_BehaviorList.Size(); i++)
 	{
@@ -16,7 +16,7 @@ DecisionKeyboard::~DecisionKeyboard()
 	}
 }
 
-void DecisionKeyboard::makeDecision(Entity * Agent, float deltaTime)
+void DecisionArrive::makeDecision(Entity * Agent, float deltaTime)
 {
 	Vector2 ForceMax;
 
@@ -39,8 +39,14 @@ void DecisionKeyboard::makeDecision(Entity * Agent, float deltaTime)
 
 	velocity = velocity + ForceMax;
 
+	float VelocityMagnitude = velocity.magnitude();
+	if (VelocityMagnitude > TRUNCATE)
+	{
+		velocity.normalise();
+		velocity = velocity * TRUNCATE;
+	}
+
 	Agent->setVelocity(velocity);
 
 	Agent->setPos(Agent->getPos() + velocity * 10 * deltaTime);
-
 }

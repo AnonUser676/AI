@@ -54,9 +54,6 @@
     <ClCompile Include="BotUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BehaviorPursue.cpp">
-      <Filter>Source Files\Behavior</Filter>
-    </ClCompile>
     <ClCompile Include="StateMachine.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -91,6 +88,15 @@
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
     <ClCompile Include="DecisionButtonPressed.cpp">
+      <Filter>Source Files\Decision</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorKeyboard.cpp">
+      <Filter>Source Files\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorWander.cpp">
+      <Filter>Source Files\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionArrive.cpp">
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
   </ItemGroup>
@@ -176,9 +182,6 @@
     <ClInclude Include="BehaviorSeek.h">
       <Filter>Header Files\Behavior</Filter>
     </ClInclude>
-    <ClInclude Include="BehaviorPursue.h">
-      <Filter>Header Files\Behavior</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviorFlee.h">
       <Filter>Header Files\Behavior</Filter>
     </ClInclude>
@@ -192,6 +195,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DecisionButtonPressed.h">
+      <Filter>Header Files\Decision</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorKeyboard.h">
+      <Filter>Header Files\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorWander.h">
+      <Filter>Header Files\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionArrive.h">
       <Filter>Header Files\Decision</Filter>
     </ClInclude>
   </ItemGroup>

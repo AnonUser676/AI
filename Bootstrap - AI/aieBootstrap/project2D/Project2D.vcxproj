@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -166,10 +166,12 @@
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="BehaviorArrival.cpp" />
     <ClCompile Include="BehaviorFlee.cpp" />
-    <ClCompile Include="BehaviorPursue.cpp" />
+    <ClCompile Include="BehaviorKeyboard.cpp" />
     <ClCompile Include="BehaviorSeek.cpp" />
+    <ClCompile Include="BehaviorWander.cpp" />
     <ClCompile Include="Bot2.cpp" />
     <ClCompile Include="BotDecision.cpp" />
+    <ClCompile Include="DecisionArrive.cpp" />
     <ClCompile Include="DecisionButtonPressed.cpp" />
     <ClCompile Include="DecisionKeyboard.cpp" />
     <ClCompile Include="DecisionToggled.cpp" />
@@ -190,11 +192,13 @@
     <ClInclude Include="BaseStateAI.h" />
     <ClInclude Include="BehaviorArrival.h" />
     <ClInclude Include="BehaviorFlee.h" />
-    <ClInclude Include="BehaviorPursue.h" />
+    <ClInclude Include="BehaviorKeyboard.h" />
     <ClInclude Include="BehaviorSeek.h" />
+    <ClInclude Include="BehaviorWander.h" />
     <ClInclude Include="Bot2.h" />
     <ClInclude Include="BotDecision.h" />
     <ClInclude Include="Decision.h" />
+    <ClInclude Include="DecisionArrive.h" />
     <ClInclude Include="DecisionButtonPressed.h" />
     <ClInclude Include="DecisionKeyboard.h" />
     <ClInclude Include="DecisionToggled.h" />

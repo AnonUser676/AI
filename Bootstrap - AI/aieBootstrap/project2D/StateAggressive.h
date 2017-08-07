@@ -26,8 +26,6 @@ public:
 	void onDraw(Renderer2D* renderer2D);
 	void onExit();
 
-	Texture* m_car;
-
 	Vector2 Pos;
 	unsigned int nxtNode;
 	int start;

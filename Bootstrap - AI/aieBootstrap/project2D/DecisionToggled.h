@@ -8,7 +8,7 @@ public:
 	DecisionToggled();
 	~DecisionToggled();
 
-	void Update(Entity* Agent, float deltaTime);
+	void makeDecision(Entity* Agent, float deltaTime);
 
 private:
 	DecisionTree*	m_Root;
